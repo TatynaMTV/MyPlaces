@@ -20,6 +20,7 @@
 		E2D900492729EB9E0001B7C0 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D900482729EB9E0001B7C0 /* CustomTableViewCell.swift */; };
 		E2D9006D2729F4F60001B7C0 /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D9006C2729F4F60001B7C0 /* PlaceModel.swift */; };
 		E2D9006F2729FF140001B7C0 /* NewPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D9006E2729FF140001B7C0 /* NewPlaceViewController.swift */; };
+		E2D90071272A154B0001B7C0 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D90070272A154B0001B7C0 /* StorageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,6 +52,7 @@
 		E2D900482729EB9E0001B7C0 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		E2D9006C2729F4F60001B7C0 /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 		E2D9006E2729FF140001B7C0 /* NewPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceViewController.swift; sourceTree = "<group>"; };
+		E2D90070272A154B0001B7C0 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				E2D9006E2729FF140001B7C0 /* NewPlaceViewController.swift */,
 				E2D900482729EB9E0001B7C0 /* CustomTableViewCell.swift */,
 				E2D9006C2729F4F60001B7C0 /* PlaceModel.swift */,
+				E2D90070272A154B0001B7C0 /* StorageManager.swift */,
 				E2D900312729E9C10001B7C0 /* Main.storyboard */,
 				E2D900342729E9C20001B7C0 /* Assets.xcassets */,
 				E2D900362729E9C20001B7C0 /* LaunchScreen.storyboard */,
@@ -207,6 +210,7 @@
 				E2D900302729E9C10001B7C0 /* MainViewController.swift in Sources */,
 				E2D9006F2729FF140001B7C0 /* NewPlaceViewController.swift in Sources */,
 				E2D9006D2729F4F60001B7C0 /* PlaceModel.swift in Sources */,
+				E2D90071272A154B0001B7C0 /* StorageManager.swift in Sources */,
 				E2D9002C2729E9C10001B7C0 /* AppDelegate.swift in Sources */,
 				E2D900492729EB9E0001B7C0 /* CustomTableViewCell.swift in Sources */,
 				E2D9002E2729E9C10001B7C0 /* SceneDelegate.swift in Sources */,
