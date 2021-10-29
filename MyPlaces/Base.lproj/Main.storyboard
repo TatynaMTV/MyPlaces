@@ -262,6 +262,23 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="140" id="1dV-Af-h9e">
+                                        <rect key="frame" x="0.0" y="519.5" width="414" height="140"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1dV-Af-h9e" id="vpP-Xt-1DO">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="44" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Omk-7e-NIZ" customClass="RatingControl" customModule="MyPlaces" customModuleProvider="target">
+                                                    <rect key="frame" x="107" y="48" width="200" height="44"/>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Omk-7e-NIZ" firstAttribute="centerX" secondItem="vpP-Xt-1DO" secondAttribute="centerX" id="bUS-6s-CjT"/>
+                                                <constraint firstItem="Omk-7e-NIZ" firstAttribute="centerY" secondItem="vpP-Xt-1DO" secondAttribute="centerY" id="sml-BY-Mvb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -287,6 +304,7 @@
                         <outlet property="placeLocation" destination="DE8-s2-gOw" id="2xP-c6-ybH"/>
                         <outlet property="placeName" destination="Y9D-5F-Xi5" id="g9O-OU-O4z"/>
                         <outlet property="placeType" destination="NVl-dO-fTN" id="fgk-Lb-wPZ"/>
+                        <outlet property="ratingControl" destination="Omk-7e-NIZ" id="Kjz-gg-nui"/>
                         <outlet property="saveButton" destination="qNW-B7-ufw" id="Hna-f6-b5R"/>
                     </connections>
                 </tableViewController>

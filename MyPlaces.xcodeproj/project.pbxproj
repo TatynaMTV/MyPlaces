@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E2CB423F272BFD3F00D8C8B6 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CB423E272BFD3F00D8C8B6 /* RatingControl.swift */; };
 		E2D9002C2729E9C10001B7C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D9002B2729E9C10001B7C0 /* AppDelegate.swift */; };
 		E2D9002E2729E9C10001B7C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D9002D2729E9C10001B7C0 /* SceneDelegate.swift */; };
 		E2D900302729E9C10001B7C0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D9002F2729E9C10001B7C0 /* MainViewController.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E2CB423E272BFD3F00D8C8B6 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		E2D900282729E9C10001B7C0 /* MyPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2D9002B2729E9C10001B7C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2D9002D2729E9C10001B7C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				E2D9002F2729E9C10001B7C0 /* MainViewController.swift */,
 				E2D9006E2729FF140001B7C0 /* NewPlaceViewController.swift */,
 				E2D900482729EB9E0001B7C0 /* CustomTableViewCell.swift */,
+				E2CB423E272BFD3F00D8C8B6 /* RatingControl.swift */,
 				E2D9006C2729F4F60001B7C0 /* PlaceModel.swift */,
 				E2D90070272A154B0001B7C0 /* StorageManager.swift */,
 				E2D900312729E9C10001B7C0 /* Main.storyboard */,
@@ -211,6 +214,7 @@
 				E2D9006F2729FF140001B7C0 /* NewPlaceViewController.swift in Sources */,
 				E2D9006D2729F4F60001B7C0 /* PlaceModel.swift in Sources */,
 				E2D90071272A154B0001B7C0 /* StorageManager.swift in Sources */,
+				E2CB423F272BFD3F00D8C8B6 /* RatingControl.swift in Sources */,
 				E2D9002C2729E9C10001B7C0 /* AppDelegate.swift in Sources */,
 				E2D900492729EB9E0001B7C0 /* CustomTableViewCell.swift in Sources */,
 				E2D9002E2729E9C10001B7C0 /* SceneDelegate.swift in Sources */,

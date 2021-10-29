@@ -122,6 +122,10 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     
     // MARK: - Table view delegate
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let place = places[indexPath.row]
         let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { _, _, _ in
@@ -130,10 +134,6 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         }
         let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
         return configuration
-    }
-    
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 85
     }
 }
 
