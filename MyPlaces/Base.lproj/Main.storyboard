@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Aue-KJ-IKl">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="119" width="414" height="777"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="85" id="PvH-dp-NdV" customClass="CustomTableViewCell" customModule="FavouritePlaces" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="85" id="PvH-dp-NdV" customClass="CustomTableViewCell" customModule="MyPlaces" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PvH-dp-NdV" id="aWT-CF-8ns">
@@ -72,21 +72,43 @@
                                             <outlet property="locationLable" destination="tVl-oL-n8C" id="sai-qC-79g"/>
                                             <outlet property="nameLable" destination="NoX-tk-hCN" id="d8c-R1-0kC"/>
                                             <outlet property="typeLable" destination="emu-fZ-IS7" id="a95-sO-ZCc"/>
+                                            <segue destination="dsZ-BU-jBR" kind="show" identifier="showDetail" id="C2P-A5-Sl4"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1Rz-yW-eVZ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="wwl-Oa-Pbp"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Date"/>
+                                    <segment title="Name"/>
+                                </segments>
+                                <connections>
+                                    <action selector="sortSelection:" destination="BYZ-38-t0r" eventType="valueChanged" id="lJe-3O-e1u"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="Aue-KJ-IKl" secondAttribute="bottom" id="UJr-lC-cO2"/>
-                            <constraint firstItem="Aue-KJ-IKl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VcI-eT-Gn2"/>
-                            <constraint firstItem="Aue-KJ-IKl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gvQ-kT-QOn"/>
-                            <constraint firstItem="Aue-KJ-IKl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="wHZ-q4-vtb"/>
+                            <constraint firstItem="Aue-KJ-IKl" firstAttribute="top" secondItem="1Rz-yW-eVZ" secondAttribute="bottom" constant="1" id="3HR-UU-oMQ"/>
+                            <constraint firstItem="Aue-KJ-IKl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7SX-H1-tr0"/>
+                            <constraint firstItem="1Rz-yW-eVZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Yfd-h7-2BM"/>
+                            <constraint firstItem="1Rz-yW-eVZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bLr-zC-1jH"/>
+                            <constraint firstAttribute="bottom" secondItem="Aue-KJ-IKl" secondAttribute="bottom" id="cGC-je-Lej"/>
+                            <constraint firstItem="Aue-KJ-IKl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cyV-1f-lX4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Rz-yW-eVZ" secondAttribute="trailing" id="zQs-8M-loZ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="My places" id="lXl-Zv-058">
+                    <navigationItem key="navigationItem" title="My places" largeTitleDisplayMode="never" id="lXl-Zv-058">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="arrow.down.to.line.circle" catalog="system" id="ieL-pJ-ReX">
+                            <connections>
+                                <action selector="reversedSorting:" destination="BYZ-38-t0r" id="QCG-hb-OYl"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus.circle" catalog="system" id="gqU-xT-Gx3">
                             <connections>
                                 <segue destination="z85-mv-v8C" kind="presentation" modalTransitionStyle="crossDissolve" id="asq-Hz-aa4"/>
@@ -94,19 +116,21 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="reversedSortingButton" destination="ieL-pJ-ReX" id="bgN-5B-5nE"/>
+                        <outlet property="segmentedControl" destination="1Rz-yW-eVZ" id="igI-qb-Jhd"/>
                         <outlet property="tableView" destination="Aue-KJ-IKl" id="sWQ-4c-qh4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="709" y="94"/>
+            <point key="canvasLocation" x="708.69565217391312" y="93.75"/>
         </scene>
         <!--New place-->
         <scene sceneID="pL4-2A-50t">
             <objects>
                 <tableViewController id="dsZ-BU-jBR" customClass="NewPlaceViewController" customModule="MyPlaces" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="XX0-md-sda">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
@@ -246,7 +270,7 @@
                             <outlet property="delegate" destination="dsZ-BU-jBR" id="Iwi-2R-EYT"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="New place" id="5w0-i2-FtG">
+                    <navigationItem key="navigationItem" title="New place" largeTitleDisplayMode="always" id="5w0-i2-FtG">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="L7a-r4-jlB">
                             <connections>
                                 <action selector="cancelAction:" destination="dsZ-BU-jBR" id="LqV-o5-y0D"/>
@@ -276,8 +300,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fcj-bg-Gdk" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ajx-hN-FGF">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Ajx-hN-FGF">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="25"/>
@@ -311,8 +335,12 @@
             <point key="canvasLocation" x="1477" y="-603"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="C2P-A5-Sl4"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Photo" width="195" height="196"/>
+        <image name="arrow.down.to.line.circle" catalog="system" width="128" height="121"/>
         <image name="plus.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
