@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E24805282732C1FD00654193 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24805272732C1FD00654193 /* MapManager.swift */; };
+		E291CDD2272FF967002BB025 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E291CDD1272FF967002BB025 /* MapViewController.swift */; };
 		E2CB423F272BFD3F00D8C8B6 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CB423E272BFD3F00D8C8B6 /* RatingControl.swift */; };
 		E2D9002C2729E9C10001B7C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D9002B2729E9C10001B7C0 /* AppDelegate.swift */; };
 		E2D9002E2729E9C10001B7C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D9002D2729E9C10001B7C0 /* SceneDelegate.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E24805272732C1FD00654193 /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
+		E291CDD1272FF967002BB025 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		E2CB423E272BFD3F00D8C8B6 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		E2D900282729E9C10001B7C0 /* MyPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2D9002B2729E9C10001B7C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +74,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E24805292732C9CD00654193 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E2D900312729E9C10001B7C0 /* Main.storyboard */,
+				E2D900362729E9C20001B7C0 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E248052A2732C9EC00654193 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E2D9002D2729E9C10001B7C0 /* SceneDelegate.swift */,
+				E2D9002B2729E9C10001B7C0 /* AppDelegate.swift */,
+				E2D900342729E9C20001B7C0 /* Assets.xcassets */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		E248052B2732CA3000654193 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E2D9006C2729F4F60001B7C0 /* PlaceModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E248052C2732CA4500654193 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E2CB423E272BFD3F00D8C8B6 /* RatingControl.swift */,
+				E2D90070272A154B0001B7C0 /* StorageManager.swift */,
+				E24805272732C1FD00654193 /* MapManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E248052D2732CA6200654193 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E2D9002F2729E9C10001B7C0 /* MainViewController.swift */,
+				E2D9006E2729FF140001B7C0 /* NewPlaceViewController.swift */,
+				E291CDD1272FF967002BB025 /* MapViewController.swift */,
+				E2D900482729EB9E0001B7C0 /* CustomTableViewCell.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		E2D9001F2729E9C10001B7C0 = {
 			isa = PBXGroup;
 			children = (
@@ -90,17 +142,11 @@
 		E2D9002A2729E9C10001B7C0 /* MyPlaces */ = {
 			isa = PBXGroup;
 			children = (
-				E2D9002B2729E9C10001B7C0 /* AppDelegate.swift */,
-				E2D9002D2729E9C10001B7C0 /* SceneDelegate.swift */,
-				E2D9002F2729E9C10001B7C0 /* MainViewController.swift */,
-				E2D9006E2729FF140001B7C0 /* NewPlaceViewController.swift */,
-				E2D900482729EB9E0001B7C0 /* CustomTableViewCell.swift */,
-				E2CB423E272BFD3F00D8C8B6 /* RatingControl.swift */,
-				E2D9006C2729F4F60001B7C0 /* PlaceModel.swift */,
-				E2D90070272A154B0001B7C0 /* StorageManager.swift */,
-				E2D900312729E9C10001B7C0 /* Main.storyboard */,
-				E2D900342729E9C20001B7C0 /* Assets.xcassets */,
-				E2D900362729E9C20001B7C0 /* LaunchScreen.storyboard */,
+				E248052D2732CA6200654193 /* ViewControllers */,
+				E248052C2732CA4500654193 /* Helpers */,
+				E248052B2732CA3000654193 /* Models */,
+				E248052A2732C9EC00654193 /* Support Files */,
+				E24805292732C9CD00654193 /* View */,
 				E2D900392729E9C20001B7C0 /* Info.plist */,
 			);
 			path = MyPlaces;
@@ -214,7 +260,9 @@
 				E2D9006F2729FF140001B7C0 /* NewPlaceViewController.swift in Sources */,
 				E2D9006D2729F4F60001B7C0 /* PlaceModel.swift in Sources */,
 				E2D90071272A154B0001B7C0 /* StorageManager.swift in Sources */,
+				E291CDD2272FF967002BB025 /* MapViewController.swift in Sources */,
 				E2CB423F272BFD3F00D8C8B6 /* RatingControl.swift in Sources */,
+				E24805282732C1FD00654193 /* MapManager.swift in Sources */,
 				E2D9002C2729E9C10001B7C0 /* AppDelegate.swift in Sources */,
 				E2D900492729EB9E0001B7C0 /* CustomTableViewCell.swift in Sources */,
 				E2D9002E2729E9C10001B7C0 /* SceneDelegate.swift in Sources */,
